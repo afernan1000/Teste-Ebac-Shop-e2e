@@ -10,11 +10,16 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
         E validando minha compra ao final */
 
     beforeEach(() => {
-        cy.visit('/')
+        cy.visit('minha conta')
+        // APONTANDO PARA O PERFIL EM FIXTURE E CRIANDO VARIAVEL DADOS
+        cy.fixture('perfil').then(dados => {
+            // FAZENDO LOGIN COM COMANDOS CUSTOMIZADOS E COM A VARIAVEL DADOS
+            cy.login(dados.usuario, dados.senha)
+        })
     });
 
     it('Deve fazer um pedido na loja Ebac Shop de ponta a ponta', () => {
-        //TODO 
+
     });
 
 
