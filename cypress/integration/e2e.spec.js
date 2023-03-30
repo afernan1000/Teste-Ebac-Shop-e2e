@@ -1,8 +1,8 @@
 /// <reference types="cypress" />
 
-import enderecoPage from '../support/page-objects/endereco.page';
-
 const dadosEndereco = require('../fixtures/endereco.json')
+
+import enderecoPage from '../support/page-objects/endereco.page';
 
 context('Exercício - Testes End-to-End - Fluxo de Pedido', () => {
     /*  COMO cliente

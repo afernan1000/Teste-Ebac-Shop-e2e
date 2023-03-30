@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "cy:open": "npx cypress open",
     "cy:run": "npx cypress run --browser chrome",
-    "cy:shop": "npx cypress run --browser chrome --spec 'C:/GitHub/Teste-Ebac-Shop-e2e/cypress/integration/e2e.spec.js'",
-    "cy:shop-report": "cypress run --browser chrome --spec 'C:/GitHub/Teste-Ebac-Shop-e2e/cypress/integration/e2e.spec.js' --record --key 4941cd34-e78b-43bb-8a35-c8d161c7a3da"
+    "cy:shop": "npx cypress run --browser chrome --spec 'C:/GitHub/Teste-Ebac-Shop-e2e/cypress/integration/*.spec.js'",
+    "cy:shop-report": "cypress run --browser chrome --spec 'C:/GitHub/Teste-Ebac-Shop-e2e/cypress/integration/*.spec.js' --record --key 4941cd34-e78b-43bb-8a35-c8d161c7a3da"
   },
   "repository": {
     "type": "git",
