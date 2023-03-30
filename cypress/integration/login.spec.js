@@ -1,4 +1,5 @@
 /// <reference types="cypress" />
+
 let dadosLogin
 
 context('Funcionalidade Login', () => {
@@ -16,23 +17,24 @@ context('Funcionalidade Login', () => {
         cy.screenshot()
     }); */
 
-    it('Login com sucesso usando Comando customizado', () => {
+    it('Deve fazer login com sucesso - Usando Comando Customizado', () => {
         cy.login(dadosLogin.usuario, dadosLogin.senha)
         cy.get('.page-title').should('contain', 'Minha conta')
     });
 
-    it('Login usando fixture', () => {
+    it('Deve fazer login com sucesso - Usando Fixture', () => {
         cy.fixture('perfil').then((dados) => {
             cy.login(dados.usuario, dados.senha)
         })
         cy.get('.page-title').should('contain', 'Minha conta')
     });
 
-    it('Deve fazer login com sucesso - sem otimização', () => {
+    it('Deve fazer login com sucesso - Sem Otimização', () => {
         cy.get('#username').type(dadosLogin.usuario)
         cy.get('#password').type(dadosLogin.senha, { log: false })
         cy.get('.woocommerce-form > .button').click()
         cy.get('.page-title').should('contain', 'Minha conta')
         cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain', 'Olá,')
     })
+
 })

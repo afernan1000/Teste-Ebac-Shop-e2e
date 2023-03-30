@@ -25,7 +25,7 @@ context('Exercício - Testes End-to-End - Fluxo de Pedido', () => {
         cy.visit('produtos')
     });
 
-    it('Deve fazer um pedido na loja Ebac Shop de ponta a ponta', () => {
+    it('Deve fazer um pedido de ponta a ponta na Ebac Shop - Comandos Customizados + Variável + Fixture + Page + Validação', () => {
         var a = 1
         var b = 1
         var c = 1
